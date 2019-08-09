@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7E922FB61C500B4A8AD /* AppDelegate.swift */; };
-		457FC7EC22FB61C500B4A8AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7EB22FB61C500B4A8AD /* ViewController.swift */; };
+		457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */; };
 		457FC7EF22FB61C500B4A8AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457FC7ED22FB61C500B4A8AD /* Main.storyboard */; };
 		457FC7F122FB61C600B4A8AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457FC7F022FB61C600B4A8AD /* Assets.xcassets */; };
 		457FC7F422FB61C600B4A8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457FC7F222FB61C600B4A8AD /* LaunchScreen.storyboard */; };
+		457FC80122FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		457FC7E622FB61C500B4A8AD /* Bunny Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bunny Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		457FC7E922FB61C500B4A8AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		457FC7EB22FB61C500B4A8AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		457FC7EE22FB61C500B4A8AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		457FC7F022FB61C600B4A8AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457FC7F322FB61C600B4A8AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		457FC7F522FB61C600B4A8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		457FC7E822FB61C500B4A8AD /* Bunny Eats */ = {
 			isa = PBXGroup;
 			children = (
-				457FC7E922FB61C500B4A8AD /* AppDelegate.swift */,
-				457FC7EB22FB61C500B4A8AD /* ViewController.swift */,
-				457FC7ED22FB61C500B4A8AD /* Main.storyboard */,
+				457FC7FE22FBB65D00B4A8AD /* Model */,
+				457FC7FC22FBB62C00B4A8AD /* View */,
+				457FC7FD22FBB64200B4A8AD /* Controller */,
+				457FC7FF22FBB68100B4A8AD /* Support Files */,
 				457FC7F022FB61C600B4A8AD /* Assets.xcassets */,
-				457FC7F222FB61C600B4A8AD /* LaunchScreen.storyboard */,
-				457FC7F522FB61C600B4A8AD /* Info.plist */,
 			);
 			path = "Bunny Eats";
+			sourceTree = "<group>";
+		};
+		457FC7FC22FBB62C00B4A8AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				457FC7ED22FB61C500B4A8AD /* Main.storyboard */,
+				457FC7F222FB61C600B4A8AD /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		457FC7FD22FBB64200B4A8AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				457FC7E922FB61C500B4A8AD /* AppDelegate.swift */,
+				457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		457FC7FE22FBB65D00B4A8AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		457FC7FF22FBB68100B4A8AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				457FC7F522FB61C600B4A8AD /* Info.plist */,
+				457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457FC80122FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf in Resources */,
 				457FC7F422FB61C600B4A8AD /* LaunchScreen.storyboard in Resources */,
 				457FC7F122FB61C600B4A8AD /* Assets.xcassets in Resources */,
 				457FC7EF22FB61C500B4A8AD /* Main.storyboard in Resources */,
@@ -135,7 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457FC7EC22FB61C500B4A8AD /* ViewController.swift in Sources */,
+				457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */,
 				457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q369FK9888;
-				INFOPLIST_FILE = "Bunny Eats/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Bunny Eats/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q369FK9888;
-				INFOPLIST_FILE = "Bunny Eats/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Bunny Eats/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

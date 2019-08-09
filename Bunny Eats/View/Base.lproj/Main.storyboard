@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHv-T5-vD0">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Thin.otf">
+            <string>SFProDisplay-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Bunny Eats-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LandingViewController" customModule="Bunny_Eats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingBG" translatesAutoresizingMaskIntoConstraints="NO" id="nwb-gY-3ic">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-hh-RM7" userLabel="blurredView">
+                                <rect key="frame" x="13" y="543" width="349" height="146"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap a photo of the outside world and get a curated list of delicious eats, fit for the mood, near you." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-gM-HwB" userLabel="landingLabel">
+                                <rect key="frame" x="13" y="571.33333333333337" width="349" height="89.666666666666629"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Thin" family="SF Pro Display" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yd9-gM-HwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="09g-X3-y1D"/>
+                            <constraint firstAttribute="bottom" secondItem="nwb-gY-3ic" secondAttribute="bottom" id="0uc-mi-cZk"/>
+                            <constraint firstItem="UxP-hh-RM7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="543" id="1ap-Kz-x3n"/>
+                            <constraint firstAttribute="bottom" secondItem="UxP-hh-RM7" secondAttribute="bottom" constant="123" id="8dd-49-lZd"/>
+                            <constraint firstItem="UxP-hh-RM7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="13" id="BRp-Jj-do2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yd9-gM-HwB" secondAttribute="trailing" constant="13" id="Otv-M9-0W1"/>
+                            <constraint firstItem="nwb-gY-3ic" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SEL-qI-wLz"/>
+                            <constraint firstItem="nwb-gY-3ic" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZqR-fy-BAH"/>
+                            <constraint firstAttribute="trailing" secondItem="UxP-hh-RM7" secondAttribute="trailing" constant="13" id="nUJ-5t-7xZ"/>
+                            <constraint firstAttribute="trailing" secondItem="nwb-gY-3ic" secondAttribute="trailing" id="uPD-na-6Og"/>
+                            <constraint firstAttribute="bottom" secondItem="yd9-gM-HwB" secondAttribute="bottom" constant="151" id="xDy-NA-MNS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bunny Eats" id="LHP-4c-NAS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="4zV-Ub-HBw">
+                            <connections>
+                                <action selector="cameraButton:" destination="BYZ-38-t0r" id="wv8-f9-7lW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blurredView" destination="UxP-hh-RM7" id="3LT-PL-eXm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.79999999999995" y="20.689655172413794"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TV4-6q-7vg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uHv-T5-vD0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rMS-TI-m7x">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N6e-cd-g0j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOU-3d-dWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="landingBG" width="5304" height="7952"/>
+    </resources>
+</document>
