@@ -34,7 +34,7 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         guard let manifestPath = Bundle.main.path(forResource: "manifest",
                                                   ofType: "json",
-                                                  inDirectory: "my_model") else { return }
+                                                  inDirectory: "model") else { return }
         let localModel = LocalModel(
             name: "localModel",
             path: manifestPath
@@ -44,7 +44,30 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        if let userImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            let processImage = VisionImage(image: userImage)
+            
+            let labelerOptions = VisionOnDeviceAutoMLImageLabelerOptions(
+                remoteModelName: nil,
+                localModelName: "localModel"
+            )
+            labelerOptions.confidenceThreshold = 0.5
+            
+            let labeler = Vision.vision().onDeviceAutoMLImageLabeler(options: labelerOptions)
+            
+            labeler.process(processImage) { labels, error in
+                guard error == nil, let labels = labels else { return }
+                
+                for label in labels {
+                    let labelText = label.text
+                    _ = label.confidence
+                    
+                    print(labelText)
+                }
+            }
+            
+        }
         
         imagePicker.dismiss(animated: true, completion: nil)
     }

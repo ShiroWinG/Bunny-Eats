@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>653711326979-mken0nuda27o7h19cpuu60als9f8m3pk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.653711326979-mken0nuda27o7h19cpuu60als9f8m3pk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA_jFr4FlvJRAmdRZSZO2IFxfHooBVgBq8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>653711326979</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jayzhang.Bunny-Eats</string>
+	<key>PROJECT_ID</key>
+	<string>bunny-eats</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bunny-eats.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:653711326979:ios:a61bbfeea4579d92</string>
+	<key>DATABASE_URL</key>
+	<string>https://bunny-eats.firebaseio.com</string>
+</dict>
+</plist>

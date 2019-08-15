@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		455AD3E62302086E00DDD233 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455AD3E52302086E00DDD233 /* GoogleService-Info.plist */; };
 		455AD3E92302754E00DDD233 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455AD3E72302754D00DDD233 /* ResultViewController.swift */; };
 		455AD3EA2302754E00DDD233 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455AD3E82302754D00DDD233 /* ResultViewController.xib */; };
 		457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7E922FB61C500B4A8AD /* AppDelegate.swift */; };
@@ -16,13 +15,13 @@
 		457FC7F122FB61C600B4A8AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457FC7F022FB61C600B4A8AD /* Assets.xcassets */; };
 		457FC7F422FB61C600B4A8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457FC7F222FB61C600B4A8AD /* LaunchScreen.storyboard */; };
 		457FC80122FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */; };
-		45D74BC92302791C00C89D19 /* bundled-2019-08-13_04-41-49-622_tflite in Resources */ = {isa = PBXBuildFile; fileRef = 45D74BC82302791C00C89D19 /* bundled-2019-08-13_04-41-49-622_tflite */; };
+		459144D223049FE7004A0A9E /* model in Resources */ = {isa = PBXBuildFile; fileRef = 459144D123049FE7004A0A9E /* model */; };
+		45FABD0B23050443000A7D90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45FABD0A23050443000A7D90 /* GoogleService-Info.plist */; };
 		F5BF167EF5F081D4685C27C8 /* Pods_Bunny_Eats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB7E8DDF03F6E1BC3CD2B9 /* Pods_Bunny_Eats.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1AD98D8C816069217097D4AD /* Pods-Bunny Eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunny Eats.release.xcconfig"; path = "Target Support Files/Pods-Bunny Eats/Pods-Bunny Eats.release.xcconfig"; sourceTree = "<group>"; };
-		455AD3E52302086E00DDD233 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		455AD3E72302754D00DDD233 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		455AD3E82302754D00DDD233 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		457FC7E622FB61C500B4A8AD /* Bunny Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bunny Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +32,8 @@
 		457FC7F322FB61C600B4A8AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		457FC7F522FB61C600B4A8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
-		45D74BC82302791C00C89D19 /* bundled-2019-08-13_04-41-49-622_tflite */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "bundled-2019-08-13_04-41-49-622_tflite"; sourceTree = "<group>"; };
+		459144D123049FE7004A0A9E /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = "<group>"; };
+		45FABD0A23050443000A7D90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		967B97C942920516551C70B4 /* Pods-Bunny Eats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunny Eats.debug.xcconfig"; path = "Target Support Files/Pods-Bunny Eats/Pods-Bunny Eats.debug.xcconfig"; sourceTree = "<group>"; };
 		FDCB7E8DDF03F6E1BC3CD2B9 /* Pods_Bunny_Eats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bunny_Eats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,6 +62,7 @@
 		457FC7DD22FB61C400B4A8AD = {
 			isa = PBXGroup;
 			children = (
+				459144D123049FE7004A0A9E /* model */,
 				457FC7E822FB61C500B4A8AD /* Bunny Eats */,
 				457FC7E722FB61C500B4A8AD /* Products */,
 				4460407A1A28FF895D9B99CE /* Pods */,
@@ -119,9 +120,8 @@
 		457FC7FF22FBB68100B4A8AD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				45D74BC82302791C00C89D19 /* bundled-2019-08-13_04-41-49-622_tflite */,
 				457FC7F522FB61C600B4A8AD /* Info.plist */,
-				455AD3E52302086E00DDD233 /* GoogleService-Info.plist */,
+				45FABD0A23050443000A7D90 /* GoogleService-Info.plist */,
 				457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */,
 			);
 			path = "Support Files";
@@ -195,13 +195,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459144D223049FE7004A0A9E /* model in Resources */,
 				457FC80122FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf in Resources */,
 				455AD3EA2302754E00DDD233 /* ResultViewController.xib in Resources */,
 				457FC7F422FB61C600B4A8AD /* LaunchScreen.storyboard in Resources */,
-				455AD3E62302086E00DDD233 /* GoogleService-Info.plist in Resources */,
 				457FC7F122FB61C600B4A8AD /* Assets.xcassets in Resources */,
 				457FC7EF22FB61C500B4A8AD /* Main.storyboard in Resources */,
-				45D74BC92302791C00C89D19 /* bundled-2019-08-13_04-41-49-622_tflite in Resources */,
+				45FABD0B23050443000A7D90 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q369FK9888;
 				INFOPLIST_FILE = "$(SRCROOT)/Bunny Eats/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q369FK9888;
 				INFOPLIST_FILE = "$(SRCROOT)/Bunny Eats/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
