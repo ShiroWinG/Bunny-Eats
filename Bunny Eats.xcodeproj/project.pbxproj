@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		455AD3E92302754E00DDD233 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455AD3E72302754D00DDD233 /* ResultViewController.swift */; };
-		455AD3EA2302754E00DDD233 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455AD3E82302754D00DDD233 /* ResultViewController.xib */; };
+		453900D8230763FA00446758 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453900D6230763FA00446758 /* ResultViewController.swift */; };
+		453900D9230763FA00446758 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453900D7230763FA00446758 /* ResultViewController.xib */; };
+		4541AB112305FAFA00E9B7C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */; };
 		457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7E922FB61C500B4A8AD /* AppDelegate.swift */; };
 		457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */; };
 		457FC7EF22FB61C500B4A8AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457FC7ED22FB61C500B4A8AD /* Main.storyboard */; };
@@ -16,14 +17,14 @@
 		457FC7F422FB61C600B4A8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457FC7F222FB61C600B4A8AD /* LaunchScreen.storyboard */; };
 		457FC80122FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */; };
 		459144D223049FE7004A0A9E /* model in Resources */ = {isa = PBXBuildFile; fileRef = 459144D123049FE7004A0A9E /* model */; };
-		45FABD0B23050443000A7D90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45FABD0A23050443000A7D90 /* GoogleService-Info.plist */; };
 		F5BF167EF5F081D4685C27C8 /* Pods_Bunny_Eats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB7E8DDF03F6E1BC3CD2B9 /* Pods_Bunny_Eats.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1AD98D8C816069217097D4AD /* Pods-Bunny Eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunny Eats.release.xcconfig"; path = "Target Support Files/Pods-Bunny Eats/Pods-Bunny Eats.release.xcconfig"; sourceTree = "<group>"; };
-		455AD3E72302754D00DDD233 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		455AD3E82302754D00DDD233 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		453900D6230763FA00446758 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		453900D7230763FA00446758 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		457FC7E622FB61C500B4A8AD /* Bunny Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bunny Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		457FC7E922FB61C500B4A8AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		457FC7F522FB61C600B4A8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		459144D123049FE7004A0A9E /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = "<group>"; };
-		45FABD0A23050443000A7D90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		967B97C942920516551C70B4 /* Pods-Bunny Eats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunny Eats.debug.xcconfig"; path = "Target Support Files/Pods-Bunny Eats/Pods-Bunny Eats.debug.xcconfig"; sourceTree = "<group>"; };
 		FDCB7E8DDF03F6E1BC3CD2B9 /* Pods_Bunny_Eats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bunny_Eats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,8 +104,8 @@
 			children = (
 				457FC7E922FB61C500B4A8AD /* AppDelegate.swift */,
 				457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */,
-				455AD3E72302754D00DDD233 /* ResultViewController.swift */,
-				455AD3E82302754D00DDD233 /* ResultViewController.xib */,
+				453900D6230763FA00446758 /* ResultViewController.swift */,
+				453900D7230763FA00446758 /* ResultViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				457FC7F522FB61C600B4A8AD /* Info.plist */,
-				45FABD0A23050443000A7D90 /* GoogleService-Info.plist */,
+				4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */,
 				457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */,
 			);
 			path = "Support Files";
@@ -197,11 +197,11 @@
 			files = (
 				459144D223049FE7004A0A9E /* model in Resources */,
 				457FC80122FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf in Resources */,
-				455AD3EA2302754E00DDD233 /* ResultViewController.xib in Resources */,
 				457FC7F422FB61C600B4A8AD /* LaunchScreen.storyboard in Resources */,
 				457FC7F122FB61C600B4A8AD /* Assets.xcassets in Resources */,
 				457FC7EF22FB61C500B4A8AD /* Main.storyboard in Resources */,
-				45FABD0B23050443000A7D90 /* GoogleService-Info.plist in Resources */,
+				4541AB112305FAFA00E9B7C2 /* GoogleService-Info.plist in Resources */,
+				453900D9230763FA00446758 /* ResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +271,7 @@
 			files = (
 				457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */,
 				457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */,
-				455AD3E92302754E00DDD233 /* ResultViewController.swift in Sources */,
+				453900D8230763FA00446758 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

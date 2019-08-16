@@ -2,29 +2,32 @@
 //  ResultViewController.swift
 //  Bunny Eats
 //
-//  Created by Zhi Wei Zhang on 8/13/19.
+//  Created by Zhi Wei Zhang on 8/16/19.
 //  Copyright © 2019 Zhi Wei Zhang. All rights reserved.
 //
 
 import UIKit
 
 class ResultViewController: UIViewController {
-
-    @IBOutlet weak var topView: UIView!
     
+    @IBOutlet weak var blurredView: UIView!
+    @IBOutlet weak var bgImage: UIImageView!
     
-
+    var weatherResult = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Setup blurred view and landing label
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = topView.bounds
-        topView.addSubview(blurView)
+        blurView.frame = blurredView.bounds
+        blurredView.addSubview(blurView)
         
-        topView.alpha = 0.85
-        topView.layer.cornerRadius = 10
-        topView.layer.masksToBounds = true
-    
+        blurredView.alpha = 0.85
+        blurredView.layer.cornerRadius = 10
+        blurredView.layer.masksToBounds = true
+        
+        print(weatherResult)
     }
 }
