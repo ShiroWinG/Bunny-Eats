@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingBG" translatesAutoresizingMaskIntoConstraints="NO" id="56h-LG-JVD" userLabel="bgImage">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="56h-LG-JVD" userLabel="bgImage">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1no-m3-wZm" userLabel="blurredView">
@@ -47,7 +47,4 @@
             <point key="canvasLocation" x="47.826086956521742" y="51.5625"/>
         </view>
     </objects>
-    <resources>
-        <image name="landingBG" width="1768" height="2650.666748046875"/>
-    </resources>
 </document>

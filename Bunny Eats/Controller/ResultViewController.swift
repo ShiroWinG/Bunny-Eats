@@ -13,7 +13,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var blurredView: UIView!
     @IBOutlet weak var bgImage: UIImageView!
     
-    var weatherResult = ""
+    var weatherResult: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +29,11 @@ class ResultViewController: UIViewController {
         blurredView.layer.masksToBounds = true
         
         print(weatherResult)
+        weatherResult = weatherResult.filter { !$0.isNewline && !$0.isWhitespace }
+        adaptiveResult(weather: weatherResult)
+    }
+    
+    func adaptiveResult(weather: String){
+        bgImage.image = UIImage(named: weather)
     }
 }
