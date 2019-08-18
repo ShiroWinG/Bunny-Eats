@@ -43,7 +43,7 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
                                                   ofType: "json",
                                                   inDirectory: "model") else { return }
         let localModel = LocalModel(
-            name: "localModel"
+            name: "localModel",
             path: manifestPath
         )
         ModelManager.modelManager().register(localModel)

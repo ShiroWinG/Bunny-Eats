@@ -9,11 +9,18 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Thin.otf">
+            <string>SFProDisplay-Thin</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="Bunny_Eats" customModuleProvider="target">
             <connections>
                 <outlet property="bgImage" destination="56h-LG-JVD" id="wxU-fX-6j1"/>
                 <outlet property="blurredView" destination="1no-m3-wZm" id="YEo-Nw-BRS"/>
+                <outlet property="food" destination="BOe-lE-XPx" id="OSx-L0-Lo4"/>
+                <outlet property="foodDescription" destination="iGT-iY-4t8" id="Zmy-GS-4uI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,17 +33,40 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1no-m3-wZm" userLabel="blurredView">
-                    <rect key="frame" x="13" y="160" width="388" height="210"/>
+                    <rect key="frame" x="13" y="130" width="388" height="210"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-lE-XPx" userLabel="food">
+                            <rect key="frame" x="5" y="13" width="378" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Uga-xf-Jhb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Thin" family="SF Pro Display" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGT-iY-4t8" userLabel="foodDescription">
+                            <rect key="frame" x="15" y="68" width="358" height="30"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Thin" family="SF Pro Display" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="iGT-iY-4t8" firstAttribute="top" secondItem="BOe-lE-XPx" secondAttribute="bottom" constant="20" id="JjX-Bn-ifz"/>
                         <constraint firstAttribute="height" constant="210" id="ZqG-iS-7hy"/>
+                        <constraint firstItem="BOe-lE-XPx" firstAttribute="top" secondItem="1no-m3-wZm" secondAttribute="top" constant="13" id="aaE-xu-vin"/>
+                        <constraint firstItem="BOe-lE-XPx" firstAttribute="leading" secondItem="1no-m3-wZm" secondAttribute="leading" constant="5" id="fg5-B9-IRs"/>
+                        <constraint firstAttribute="trailing" secondItem="iGT-iY-4t8" secondAttribute="trailing" constant="15" id="i6c-Gv-UL2"/>
+                        <constraint firstAttribute="trailing" secondItem="BOe-lE-XPx" secondAttribute="trailing" constant="5" id="olP-bs-XMb"/>
+                        <constraint firstItem="iGT-iY-4t8" firstAttribute="leading" secondItem="1no-m3-wZm" secondAttribute="leading" constant="15" id="yl1-KC-s9Q"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="56h-LG-JVD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2tM-ke-Cn1"/>
-                <constraint firstItem="1no-m3-wZm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="160" id="K9E-O1-ths"/>
+                <constraint firstItem="1no-m3-wZm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="K9E-O1-ths"/>
                 <constraint firstAttribute="trailing" secondItem="1no-m3-wZm" secondAttribute="trailing" constant="13" id="Pdi-VW-WGQ"/>
                 <constraint firstItem="56h-LG-JVD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SIt-Uh-xSr"/>
                 <constraint firstItem="1no-m3-wZm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="jIl-ym-JOk"/>
