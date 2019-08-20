@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		453900D8230763FA00446758 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453900D6230763FA00446758 /* ResultViewController.swift */; };
 		453900D9230763FA00446758 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453900D7230763FA00446758 /* ResultViewController.xib */; };
+		453900DD230B697100446758 /* FoodResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453900DC230B697100446758 /* FoodResultModel.swift */; };
 		4541AB112305FAFA00E9B7C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */; };
 		457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7E922FB61C500B4A8AD /* AppDelegate.swift */; };
 		457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */; };
@@ -24,6 +25,7 @@
 		1AD98D8C816069217097D4AD /* Pods-Bunny Eats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunny Eats.release.xcconfig"; path = "Target Support Files/Pods-Bunny Eats/Pods-Bunny Eats.release.xcconfig"; sourceTree = "<group>"; };
 		453900D6230763FA00446758 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		453900D7230763FA00446758 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		453900DC230B697100446758 /* FoodResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultModel.swift; sourceTree = "<group>"; };
 		4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		457FC7E622FB61C500B4A8AD /* Bunny Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bunny Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		457FC7E922FB61C500B4A8AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		457FC7FE22FBB65D00B4A8AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				453900DC230B697100446758 /* FoodResultModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453900DD230B697100446758 /* FoodResultModel.swift in Sources */,
 				457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */,
 				457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */,
 				453900D8230763FA00446758 /* ResultViewController.swift in Sources */,

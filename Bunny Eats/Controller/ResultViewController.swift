@@ -17,12 +17,14 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var food: UILabel!
     @IBOutlet weak var foodDescription: UILabel!
+    @IBOutlet weak var resultTableView: UITableView!
     
     let YELP_URL = "https://api.yelp.com/v3/businesses/search"
     let API_KEY = "zg-HdaMM_6ULbi8bL_xSBJLrFPUI7FxgMQpPIL25MS3niImiOYxPwBh-VPvQK2MvYlSZUVsnf1HqCrsQ86C8vblUKjZ2LrI7f0CJ0ISjkUZj4-3Y9v9u21jFvSxaXXYx"
     let locationManager = CLLocationManager()
     var weatherResult: String = ""
     var foodDict = [String: String]()
+    var result = FoodResultModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,17 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
         blurredView.bringSubviewToFront(food)
         blurredView.bringSubviewToFront(foodDescription)
         
+        //Setup blurred view for table view
+        let blurEffect2 = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let blurView2 = UIVisualEffectView(effect: blurEffect2)
+        blurView2.frame = resultTableView.bounds
+        resultTableView.addSubview(blurView2)
+        
+        resultTableView.alpha = 0.60
+        resultTableView.layer.cornerRadius = 10
+        resultTableView.layer.masksToBounds = true
+        
+        //Format weather result
         print(weatherResult)
         weatherResult = weatherResult.filter { !$0.isNewline && !$0.isWhitespace }
         adaptiveResult(weather: weatherResult)
@@ -93,7 +106,8 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
-        //holderLabel.text = "Location Unavailable :["
+        food.text = "Location Unavailable :["
+        foodDescription.text = ""
     }
     
     //Yelp query
@@ -101,33 +115,33 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
         Alamofire.request(url, method: .get, parameters: parameters, headers: AuthHeader).responseJSON {
             response in
             if response.result.isSuccess {
-                
                 let foodJSON : JSON = JSON(response.result.value!)
                 self.updateFoodData(json: foodJSON)
                 
-                print(foodJSON)
-                
             }
             else {
-                //self.holderLabel.text = "Connection Issues"
+                self.food.text = "Connection Issues"
+                self.foodDescription.text = ""
             }
         }
     }
     
     func updateFoodData(json: JSON) {
-        
-        //Requirement: resturant name, review, address
-        /*
-        if let tempResult = json["main"]["temp"].double {
-            
-            temp = (9/5) * (tempResult - 273) + 32
-            city = json["name"].stringValue
-            
-            //updateUIWithFoodData()
+        if let bizArray = json["businesses"].array {
+            for bizDict in bizArray {
+                if let name = bizDict["name"].string {
+                    result.name.append(name)
+                }
+                if let rating = bizDict["rating"].double {
+                    result.rating.append(rating)
+                }
+                if let address1 = bizDict["location"]["address1"].string {
+                    result.location.append(address1)
+                }
+            }
         }
-        else {
-            //holderLabel.text = "Results Unavailable D:"
-        }
-        */
+        print(result.name)
+        print(result.rating)
+        print(result.location)
     }
 }
