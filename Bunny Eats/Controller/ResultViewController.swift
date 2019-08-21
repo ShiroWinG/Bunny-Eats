@@ -11,16 +11,17 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class ResultViewController: UIViewController, CLLocationManagerDelegate {
+class ResultViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var blurredView: UIView!
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var food: UILabel!
     @IBOutlet weak var foodDescription: UILabel!
-    @IBOutlet weak var resultTableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     let YELP_URL = "https://api.yelp.com/v3/businesses/search"
     let API_KEY = "zg-HdaMM_6ULbi8bL_xSBJLrFPUI7FxgMQpPIL25MS3niImiOYxPwBh-VPvQK2MvYlSZUVsnf1HqCrsQ86C8vblUKjZ2LrI7f0CJ0ISjkUZj4-3Y9v9u21jFvSxaXXYx"
+    let cellReuseIdentifier = "cell"
     let locationManager = CLLocationManager()
     var weatherResult: String = ""
     var foodDict = [String: String]()
@@ -45,12 +46,16 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
         //Setup blurred view for table view
         let blurEffect2 = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView2 = UIVisualEffectView(effect: blurEffect2)
-        blurView2.frame = resultTableView.bounds
-        resultTableView.addSubview(blurView2)
+        blurView2.frame = tableView.bounds
+        tableView.backgroundView = blurView2
         
-        resultTableView.alpha = 0.60
-        resultTableView.layer.cornerRadius = 10
-        resultTableView.layer.masksToBounds = true
+        tableView.alpha = 0.60
+        tableView.layer.cornerRadius = 10
+        tableView.layer.masksToBounds = true
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
         //Format weather result
         print(weatherResult)
@@ -143,5 +148,19 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate {
         print(result.name)
         print(result.rating)
         print(result.location)
+        
+        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.result.name.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+        
+        cell.textLabel!.text = self.result.name[indexPath.row]
+    
+        return cell
     }
 }
