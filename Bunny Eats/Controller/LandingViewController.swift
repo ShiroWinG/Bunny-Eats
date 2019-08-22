@@ -72,7 +72,6 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
                 guard error == nil, let labels = labels else { return }
                 
                 self.returnedLabel = labels[0].text
-                print(self.returnedLabel)
                 
                 //Pass data and go to next view
                 self.imagePicker.dismiss(animated: true, completion: nil)

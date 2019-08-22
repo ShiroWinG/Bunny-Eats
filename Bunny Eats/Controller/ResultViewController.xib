@@ -65,27 +65,24 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fY3-If-tSP" userLabel="tableView">
-                    <rect key="frame" x="0.0" y="300" width="375" height="512"/>
+                    <rect key="frame" x="13" y="300" width="349" height="499"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="56h-LG-JVD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2tM-ke-Cn1"/>
-                <constraint firstAttribute="bottom" secondItem="fY3-If-tSP" secondAttribute="bottom" id="3bm-xL-8aD"/>
-                <constraint firstItem="fY3-If-tSP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F6D-e2-4KU"/>
+                <constraint firstAttribute="bottom" secondItem="fY3-If-tSP" secondAttribute="bottom" constant="13" id="3bm-xL-8aD"/>
+                <constraint firstItem="fY3-If-tSP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="13" id="F6D-e2-4KU"/>
                 <constraint firstItem="fY3-If-tSP" firstAttribute="top" secondItem="1no-m3-wZm" secondAttribute="bottom" constant="20" id="Iy8-do-WEz"/>
                 <constraint firstItem="1no-m3-wZm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="K9E-O1-ths"/>
                 <constraint firstAttribute="trailing" secondItem="1no-m3-wZm" secondAttribute="trailing" constant="13" id="Pdi-VW-WGQ"/>
                 <constraint firstItem="56h-LG-JVD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SIt-Uh-xSr"/>
+                <constraint firstAttribute="trailing" secondItem="fY3-If-tSP" secondAttribute="trailing" constant="13" id="dDe-Ah-aiv"/>
                 <constraint firstItem="1no-m3-wZm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="jIl-ym-JOk"/>
                 <constraint firstAttribute="bottom" secondItem="56h-LG-JVD" secondAttribute="bottom" id="oy1-Vl-ELC"/>
                 <constraint firstItem="56h-LG-JVD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ugd-nV-M96"/>
-                <constraint firstItem="fY3-If-tSP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yik-BP-eaa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="51.5625"/>

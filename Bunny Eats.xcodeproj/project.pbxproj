@@ -10,6 +10,8 @@
 		453900D8230763FA00446758 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453900D6230763FA00446758 /* ResultViewController.swift */; };
 		453900D9230763FA00446758 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453900D7230763FA00446758 /* ResultViewController.xib */; };
 		453900DD230B697100446758 /* FoodResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453900DC230B697100446758 /* FoodResultModel.swift */; };
+		453900ED230E01BE00446758 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453900EB230E01BE00446758 /* CustomCell.swift */; };
+		453900EE230E01BE00446758 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453900EC230E01BE00446758 /* CustomCell.xib */; };
 		4541AB112305FAFA00E9B7C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */; };
 		457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7E922FB61C500B4A8AD /* AppDelegate.swift */; };
 		457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */; };
@@ -26,6 +28,9 @@
 		453900D6230763FA00446758 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		453900D7230763FA00446758 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		453900DC230B697100446758 /* FoodResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultModel.swift; sourceTree = "<group>"; };
+		453900EB230E01BE00446758 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		453900EC230E01BE00446758 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		453900EF230E36C000446758 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		457FC7E622FB61C500B4A8AD /* Bunny Eats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bunny Eats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		457FC7E922FB61C500B4A8AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +113,8 @@
 				457FC7EB22FB61C500B4A8AD /* LandingViewController.swift */,
 				453900D6230763FA00446758 /* ResultViewController.swift */,
 				453900D7230763FA00446758 /* ResultViewController.xib */,
+				453900EB230E01BE00446758 /* CustomCell.swift */,
+				453900EC230E01BE00446758 /* CustomCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 				457FC7F522FB61C600B4A8AD /* Info.plist */,
 				4541AB102305FAFA00E9B7C2 /* GoogleService-Info.plist */,
 				457FC80022FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf */,
+				453900EF230E36C000446758 /* SF-Pro-Display-Regular.otf */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 			files = (
 				459144D223049FE7004A0A9E /* model in Resources */,
 				457FC80122FBB6C900B4A8AD /* SF-Pro-Display-Thin.otf in Resources */,
+				453900EE230E01BE00446758 /* CustomCell.xib in Resources */,
 				457FC7F422FB61C600B4A8AD /* LaunchScreen.storyboard in Resources */,
 				457FC7F122FB61C600B4A8AD /* Assets.xcassets in Resources */,
 				457FC7EF22FB61C500B4A8AD /* Main.storyboard in Resources */,
@@ -248,6 +257,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -261,6 +271,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -278,6 +289,7 @@
 			files = (
 				453900DD230B697100446758 /* FoodResultModel.swift in Sources */,
 				457FC7EC22FB61C500B4A8AD /* LandingViewController.swift in Sources */,
+				453900ED230E01BE00446758 /* CustomCell.swift in Sources */,
 				457FC7EA22FB61C500B4A8AD /* AppDelegate.swift in Sources */,
 				453900D8230763FA00446758 /* ResultViewController.swift in Sources */,
 			);

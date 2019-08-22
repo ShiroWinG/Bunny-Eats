@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 class ResultViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -52,13 +53,12 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         tableView.alpha = 0.60
         tableView.layer.cornerRadius = 10
         tableView.layer.masksToBounds = true
-        
+
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         
         //Format weather result
-        print(weatherResult)
         weatherResult = weatherResult.filter { !$0.isNewline && !$0.isWhitespace }
         adaptiveResult(weather: weatherResult)
         
@@ -67,6 +67,8 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        SVProgressHUD.show()
     }
     
     //Food result and its descriptions
@@ -145,10 +147,8 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
                 }
             }
         }
-        print(result.name)
-        print(result.rating)
-        print(result.location)
-        
+
+        SVProgressHUD.dismiss()
         tableView.reloadData()
     }
     
@@ -157,10 +157,12 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! CustomCell
         
-        cell.textLabel!.text = self.result.name[indexPath.row]
-    
+        cell.name.text = self.result.name[indexPath.row]
+        cell.rating.text = String(self.result.rating[indexPath.row])
+        cell.location.text = self.result.location[indexPath.row]
+        
         return cell
     }
 }
