@@ -21,7 +21,7 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Setup blurred view and landing label
+        //Set up blurred view and landing label
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = blurredView.bounds
@@ -33,12 +33,12 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         blurredView.bringSubviewToFront(landingLabel)
         
-        //Setup camera function
+        //Set up camera function
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         
-        //Setup ML model
+        //Set up ML model
         guard let manifestPath = Bundle.main.path(forResource: "manifest",
                                                   ofType: "json",
                                                   inDirectory: "model") else { return }
@@ -46,6 +46,7 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
             name: "localModel",
             path: manifestPath
         )
+        
         ModelManager.modelManager().register(localModel)
     }
     
@@ -72,10 +73,9 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
                 guard error == nil, let labels = labels else { return }
                 
                 self.returnedLabel = labels[0].text
-                
-                //Pass data and go to next view
                 self.imagePicker.dismiss(animated: true, completion: nil)
                 
+                //Pass data and go to next view
                 let vc = ResultViewController(nibName: "ResultViewController", bundle: nil)
                 vc.weatherResult = self.returnedLabel
                 self.navigationController?.pushViewController(vc, animated: true)

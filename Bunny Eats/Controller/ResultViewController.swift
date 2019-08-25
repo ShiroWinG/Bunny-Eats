@@ -24,6 +24,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     let API_KEY = "zg-HdaMM_6ULbi8bL_xSBJLrFPUI7FxgMQpPIL25MS3niImiOYxPwBh-VPvQK2MvYlSZUVsnf1HqCrsQ86C8vblUKjZ2LrI7f0CJ0ISjkUZj4-3Y9v9u21jFvSxaXXYx"
     let cellReuseIdentifier = "cell"
     let locationManager = CLLocationManager()
+    
     var weatherResult: String = ""
     var foodDict: [String: String] = [:]
     var result = FoodResultModel()
@@ -31,7 +32,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Setup blurred view and landing labels
+        //Set up blurred view and landing labels
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = blurredView.bounds
@@ -44,7 +45,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         blurredView.bringSubviewToFront(food)
         blurredView.bringSubviewToFront(foodDescription)
         
-        //Setup blurred view for table view
+        //Set up blurred view for table view
         let blurEffect2 = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView2 = UIVisualEffectView(effect: blurEffect2)
         blurView2.frame = tableView.bounds
@@ -54,6 +55,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         tableView.layer.cornerRadius = 10
         tableView.layer.masksToBounds = true
 
+        //Set up table view
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
@@ -71,7 +73,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         SVProgressHUD.show()
     }
     
-    //Food result and its descriptions
+    //MARK: - setting background based on weather and getting randomized food result
     func adaptiveResult(weather: String){
         bgImage.image = UIImage(named: weather)
         
@@ -93,7 +95,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         foodDescription.text = randomResult?.value
     }
     
-    //Location related methods
+    //MARK: - location related methods and using result to query for nearby eats
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
@@ -117,14 +119,13 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         foodDescription.text = ""
     }
     
-    //Yelp query
+    //MARK: - using Yelp REST API to get eats and saving them
     func getFoodData(url: String, parameters: [String: String], AuthHeader: [String: String]) {
         Alamofire.request(url, method: .get, parameters: parameters, headers: AuthHeader).responseJSON {
             response in
             if response.result.isSuccess {
                 let foodJSON : JSON = JSON(response.result.value!)
                 self.updateFoodData(json: foodJSON)
-                print(foodJSON)
             }
             else {
                 self.food.text = "Connection Issues"
@@ -155,6 +156,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         tableView.reloadData()
     }
     
+    //MARK: - table view editing and using custom cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.result.name.count
     }
