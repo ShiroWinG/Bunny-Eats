@@ -12,6 +12,7 @@
 	<string>We need your camera to see the outside world!</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SF-Pro-Display-Light.otf</string>
 		<string>SF-Pro-Display-Regular.otf</string>
 		<string>SF-Pro-Display-Thin.otf</string>
 	</array>

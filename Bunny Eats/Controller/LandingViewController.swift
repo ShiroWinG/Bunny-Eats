@@ -25,9 +25,9 @@ class LandingViewController: UIViewController, UIImagePickerControllerDelegate, 
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = blurredView.bounds
+        blurView.alpha = 0.75
         blurredView.addSubview(blurView)
         
-        blurredView.alpha = 0.85
         blurredView.layer.cornerRadius = 10
         blurredView.layer.masksToBounds = true
         

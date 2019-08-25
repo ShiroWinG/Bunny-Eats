@@ -25,7 +25,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     let cellReuseIdentifier = "cell"
     let locationManager = CLLocationManager()
     var weatherResult: String = ""
-    var foodDict = [String: String]()
+    var foodDict: [String: String] = [:]
     var result = FoodResultModel()
     
     override func viewDidLoad() {
@@ -35,9 +35,9 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = blurredView.bounds
+        blurView.alpha = 0.75
         blurredView.addSubview(blurView)
         
-        blurredView.alpha = 0.85
         blurredView.layer.cornerRadius = 10
         blurredView.layer.masksToBounds = true
         
@@ -48,9 +48,9 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         let blurEffect2 = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView2 = UIVisualEffectView(effect: blurEffect2)
         blurView2.frame = tableView.bounds
+        blurView2.alpha = 0.75
         tableView.backgroundView = blurView2
         
-        tableView.alpha = 0.60
         tableView.layer.cornerRadius = 10
         tableView.layer.masksToBounds = true
 
@@ -77,20 +77,20 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         
         switch weather {
         case "sunny":
-            foodDict = ["Outdoor BBQ": "Enjoy the weather with your friends and some good ol' barbecue!"]
+            foodDict = Sunny().foodResult
         case "cloudy":
-            foodDict = ["Coffee House": "Is there a better way to spend a cloudy afternoon than doing some work with great coffee?"]
+            foodDict = Cloudy().foodResult
         case "rainy":
-            foodDict = ["Ramen": "Hey you! Did you know that ramen goes really well with a rainy day? The more you know!"]
+            foodDict = Rainy().foodResult
         case "snowy":
-            foodDict = ["Hot Pot": "A tasty hot pot with friendos can easily warm up your soul in this cold!"]
+            foodDict = Snowy().foodResult
         default:
             print("Error D:")
         }
         
-        let componentArray = Array(foodDict.keys)
-        food.text = componentArray[0]
-        foodDescription.text = foodDict[componentArray[0]]
+        let randomResult = foodDict.randomElement()
+        food.text = randomResult?.key
+        foodDescription.text = randomResult?.value
     }
     
     //Location related methods
@@ -124,7 +124,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
             if response.result.isSuccess {
                 let foodJSON : JSON = JSON(response.result.value!)
                 self.updateFoodData(json: foodJSON)
-                
+                print(foodJSON)
             }
             else {
                 self.food.text = "Connection Issues"
@@ -135,6 +135,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     
     func updateFoodData(json: JSON) {
         if let bizArray = json["businesses"].array {
+            
             for bizDict in bizArray {
                 if let name = bizDict["name"].string {
                     result.name.append(name)
@@ -144,10 +145,12 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
                 }
                 if let address1 = bizDict["location"]["address1"].string {
                     result.location.append(address1)
+                } else {
+                    result.location.append("Location unavailable")
                 }
             }
         }
-
+        
         SVProgressHUD.dismiss()
         tableView.reloadData()
     }
@@ -162,7 +165,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
         cell.name.text = self.result.name[indexPath.row]
         cell.rating.text = String(self.result.rating[indexPath.row])
         cell.location.text = self.result.location[indexPath.row]
-        
+
         return cell
     }
 }

@@ -45,8 +45,8 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGT-iY-4t8" userLabel="foodDescription">
-                            <rect key="frame" x="10" y="61" width="329" height="96"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGT-iY-4t8" userLabel="foodDescription">
+                            <rect key="frame" x="10" y="58.000000000000007" width="329" height="26.333333333333336"/>
                             <fontDescription key="fontDescription" name="SFProDisplay-Thin" family="SF Pro Display" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -54,8 +54,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="iGT-iY-4t8" secondAttribute="bottom" constant="13" id="BgS-fy-cDI"/>
-                        <constraint firstItem="iGT-iY-4t8" firstAttribute="top" secondItem="BOe-lE-XPx" secondAttribute="bottom" constant="13" id="JjX-Bn-ifz"/>
+                        <constraint firstItem="iGT-iY-4t8" firstAttribute="top" secondItem="BOe-lE-XPx" secondAttribute="bottom" constant="10" id="JjX-Bn-ifz"/>
                         <constraint firstAttribute="height" constant="170" id="ZqG-iS-7hy"/>
                         <constraint firstItem="BOe-lE-XPx" firstAttribute="top" secondItem="1no-m3-wZm" secondAttribute="top" constant="13" id="aaE-xu-vin"/>
                         <constraint firstItem="BOe-lE-XPx" firstAttribute="leading" secondItem="1no-m3-wZm" secondAttribute="leading" constant="5" id="fg5-B9-IRs"/>
@@ -64,10 +63,13 @@
                         <constraint firstItem="iGT-iY-4t8" firstAttribute="leading" secondItem="1no-m3-wZm" secondAttribute="leading" constant="10" id="yl1-KC-s9Q"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fY3-If-tSP" userLabel="tableView">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fY3-If-tSP" userLabel="tableView">
                     <rect key="frame" x="13" y="300" width="349" height="499"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
