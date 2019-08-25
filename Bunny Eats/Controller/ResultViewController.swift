@@ -74,6 +74,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     }
     
     //MARK: - setting background based on weather and getting randomized food result
+    
     func adaptiveResult(weather: String){
         bgImage.image = UIImage(named: weather)
         
@@ -96,6 +97,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     }
     
     //MARK: - location related methods and using result to query for nearby eats
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
@@ -120,6 +122,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     }
     
     //MARK: - using Yelp REST API to get eats and saving them
+    
     func getFoodData(url: String, parameters: [String: String], AuthHeader: [String: String]) {
         Alamofire.request(url, method: .get, parameters: parameters, headers: AuthHeader).responseJSON {
             response in
@@ -157,6 +160,7 @@ class ResultViewController: UIViewController, CLLocationManagerDelegate, UITable
     }
     
     //MARK: - table view editing and using custom cells
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.result.name.count
     }
