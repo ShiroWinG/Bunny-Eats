@@ -12,8 +12,7 @@ NS_SWIFT_NAME(ModelManager)
 /**
  * Returns the `ModelManager` instance for the default Firebase app. The default Firebase app
  * instance must be configured before calling this method; otherwise, raises `FIRAppNotConfigured`
- * exception. Models hosted in non-default Firebase apps are currently not supported. The returned
- * model manager is thread safe.
+ * exception. Models hosted in non-default Firebase apps are currently not supported.
  *
  * @return The `ModelManager` instance for the default Firebase app.
  */

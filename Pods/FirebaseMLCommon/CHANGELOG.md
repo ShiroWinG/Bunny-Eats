@@ -1,3 +1,7 @@
+# 2019-09-03 -- v0.18.0
+- Bug fixes.
+- [INTERNAL] Changed the minimum iOS version from 9.0 to 8.0.
+
 # 2019-07-09 -- v0.17.0
 - Bug fixes.
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F9ECB6B2A92F6016CF3BF5B2A04E4EB3"
+               BlueprintIdentifier = "3B7356AB7ABB18E92E7628E5656F9625"
                BuildableName = "FirebaseMLCommon"
                BlueprintName = "FirebaseMLCommon"
                ReferencedContainer = "container:Pods.xcodeproj">
